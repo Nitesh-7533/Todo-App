@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <link href="style.css" rel="stylesheet">
+ </link>
+</head>
+
+<body>
+ <div class="container">
+  <div class="selector">
+   <div id="selectfield">
+    <p id="selecttext">Select Social media</p>
+    <img id="arrow" src="/Menu Design/images/arrow.png">
+   </div>
+
+
+   <ul class="hide" id="list">
+    <li class="options">
+     <img src="/Menu Design/images/pinterest.png">
+     <p>Pinterest</p>
+    </li>
+
+    <li class="options">
+     <img src="/Menu Design/images/instagram.png">
+     <p>Instagram</p>
+    </li>
+
+    <li class="options">
+     <img src="/Menu Design/images/whatsapp.png">
+     <p>Whatsapp</p>
+    </li>
+
+
+    <li class="options">
+     <img src="/Menu Design/images/twitter.png">
+     <p>Twitter</p>
+    </li>
+
+    <li class="options">
+     <img src="/Menu Design/images/youtube.png">
+     <p>Youtube</p>
+    </li>
+
+    <li class="options">
+     <img src="/Menu Design/images/facebook.png">
+     <p>Facebook</p>
+    </li>
+
+   </ul>
+  </div>
+ </div>
+
+ <script>
+  const selectfield = document.getElementById("selectfield");
+  const selectText = document.getElementById("selecttext");
+  const options = document.getElementsByClassName("options");
+  const list = document.getElementById("list");
+  const arrow = document.getElementById("arrow");
+
+
+  selectfield.addEventListener("click", () => {
+   list.classList.toggle("hide");
+   arrow.classList.toggle("rotate");
+  })
+
+  for (let option of options) {
+   option.addEventListener("click", () => {
+    selectText.innerHTML = option.textContent;
+    list.classList.toggle("hide");
+    arrow.classList.toggle("rotate");
+   });
+  }
+
+
+ </script>
+
+
+</body>
+
+</html>
